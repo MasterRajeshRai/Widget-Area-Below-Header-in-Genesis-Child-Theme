@@ -1,0 +1,5 @@
+genesis_register_sidebar( array(
+     'id'          => 'widget-before-content',
+     'name'        => ( 'Widget Before Content', 'genesis' ),
+     'description' => ( 'Ad or content is displayed before a single post.', 'genesis' ),
+ ) );
