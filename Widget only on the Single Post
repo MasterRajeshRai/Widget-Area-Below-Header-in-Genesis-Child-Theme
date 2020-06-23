@@ -1,3 +1,9 @@
+genesis_register_sidebar( array(
+	'id'          => 'widget-before-content',
+	'name'        => __( 'Widget Before Content', 'genesis' ),
+	'description' => __( 'Content Displays Before All Single Posts.', 'genesis' ),
+) );
+
 add_action( 'genesis_before_content', 'wv_widget_before_content' );
 function wv_widget_before_content() {
 if ( is_singular('post') && is_active_sidebar('widget-before-content') ) {
