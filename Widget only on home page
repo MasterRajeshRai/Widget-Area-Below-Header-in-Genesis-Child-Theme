@@ -1,0 +1,15 @@
+genesis_register_sidebar( array(
+	'id'          => 'before-home-content',
+	'name'        => ( 'Home Before Content', 'genesis' ),
+	'description' => ( 'Ad or content is displayed content on homepage.', 'genesis' ),
+) );
+
+add_action( 'genesis_before_content', 'wv_home_page_widget_before_content' );
+function wv_home_page_widget_before_content() {
+if ( is_home() && is_active_sidebar('before-home') ) {
+	genesis_widget_area( 'before-home-content', array(
+		'before' => '<div class="before-home-content widget-area">',
+		'after'  => '</div>',
+	) );
+  }
+}
