@@ -1,0 +1,9 @@
+add_action( 'genesis_before_content', 'wv_widget_before_content' );
+function wv_widget_before_content() {
+if ( is_singular('post') && is_active_sidebar('widget-before-content') ) {
+	genesis_widget_area( 'widget-before-content', array(
+		'before' => '<div class="widget-before-content" class="custom-widget-area">',
+		'after'  => '</div>',
+	) );
+  }
+}
